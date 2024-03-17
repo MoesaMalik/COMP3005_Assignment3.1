@@ -61,21 +61,18 @@ Updates the email address of a student identified by their ID.
 #### 4. `deleteStudent(int studentId)`
 Deletes a student from the database based on their ID.
 
-### Example
-Here's an example of how to use the application:
+### Usage
 
-```java
-public static void main(String[] args) {
-    // Display all students
-    System.out.println("All students:");
-    getAllStudents();
-    
-    // Add a new student
-    addStudent("Alice", "Wonderland", "alice@example.com", Date.valueOf("2024-03-16"));
-    
-    // Update email of a student
-    updateStudentEmail(1, "john.doe@gmail.com");
-    
-    // Delete a student
-    deleteStudent(2);
-}
+##### When running the application, the following will be displayed in the terminal. Simply enter the number to the desired command and follow the prompts as required:
+
+
+Student Database App
+
+Enter a number (1-5)
+1. View all students
+2. Add a student
+3. Update a student's email
+4. Delete a student
+5. Exit
+Enter your choice: 
+
