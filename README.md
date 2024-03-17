@@ -12,7 +12,7 @@ Before running this application, ensure you have the following:
 ## Setting Up
 1. **Clone the Repository**: Clone the repository to your local machine using the following command:
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/MoesaMalik/COMP3005_Assignment3.1.git
    ```
    If you don't have Git installed, you can download the source code files directly from the repository.
 
