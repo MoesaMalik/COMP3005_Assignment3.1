@@ -2,6 +2,9 @@
 
 This Java application, `StudentDatabaseApp`, is designed to interact with a PostgreSQL database containing student information. It allows users to perform basic CRUD (Create, Read, Update, Delete) operations on student records. Below is a detailed guide on how to use this application effectively.
 
+## Video Demo
+[Click here to watch the video demo](https://www.youtube.com/watch?v=tcwndhcN--A)
+
 ## Prerequisites
 Before running this application, ensure you have the following:
 
