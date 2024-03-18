@@ -1,6 +1,9 @@
 import java.sql.*;
 import java.util.Scanner;
 
+/**
+ * A simple student database application.
+ */
 public class StudentDatabaseApp {
 
     // JDBC URL, username, and password of PostgreSQL server
@@ -9,6 +12,11 @@ public class StudentDatabaseApp {
     private static final String PASSWORD = "admin";
     private static final Scanner scanner = new Scanner(System.in);
 
+    /**
+     * Establishes a connection to the PostgreSQL database.
+     *
+     * @return Connection object if connection is successful, null otherwise.
+     */
     public static Connection connect() {
         try {
             return DriverManager.getConnection(URL, USER, PASSWORD);
@@ -18,6 +26,9 @@ public class StudentDatabaseApp {
         }
     }
 
+    /**
+     * Retrieves all students from the database and prints their details.
+     */
     public static void getAllStudents() {
         try (Connection conn = connect();
              Statement stmt = conn.createStatement()) {
@@ -36,6 +47,9 @@ public class StudentDatabaseApp {
         }
     }
 
+    /**
+     * Adds a new student to the database.
+     */
     public static void addStudent() {
         System.out.print("Enter first name: ");
         String firstName = scanner.nextLine();
@@ -61,6 +75,9 @@ public class StudentDatabaseApp {
         }
     }
 
+    /**
+     * Updates the email of a specific student in the database.
+     */
     public static void updateStudentEmail() {
         System.out.print("Enter student ID: ");
         int studentId = scanner.nextInt();
@@ -79,6 +96,10 @@ public class StudentDatabaseApp {
             System.out.println("Error updating email: " + e.getMessage());
         }
     }
+
+    /**
+     * Deletes a student from the database based on their ID.
+     */
     public static void deleteStudent() {
         System.out.print("Enter student ID: ");
         int studentId = scanner.nextInt();
@@ -94,6 +115,10 @@ public class StudentDatabaseApp {
         }
     }
 
+    /**
+     * Main method to run the Student Database App.
+     *
+     */
     public static void main(String[] args) {
         int choice;
         do {
