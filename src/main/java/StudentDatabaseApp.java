@@ -34,6 +34,7 @@ public class StudentDatabaseApp {
              Statement stmt = conn.createStatement()) {
             ResultSet rs = stmt.executeQuery("SELECT * FROM students");
             while (rs.next()) {
+                // Print each student's details
                 System.out.println(
                         rs.getInt("student_id") + ", " +
                                 rs.getString("first_name") + ", " +
@@ -64,10 +65,12 @@ public class StudentDatabaseApp {
         try (Connection conn = connect();
              PreparedStatement stmt = conn.prepareStatement(
                      "INSERT INTO students (first_name, last_name, email, enrollment_date) VALUES (?, ?, ?, ?)")) {
+            // Set parameters for the prepared statement
             stmt.setString(1, firstName);
             stmt.setString(2, lastName);
             stmt.setString(3, email);
             stmt.setDate(4, enrollmentDate);
+            // Execute the SQL statement
             stmt.executeUpdate();
             System.out.println("Student added successfully.");
         } catch (SQLException e) {
